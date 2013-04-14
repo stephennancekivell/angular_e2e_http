@@ -4,6 +4,5 @@
 
 angular.module('myApp.controllers', ['ngResource']).
   controller('MyCtrl1', ['$resource', '$scope', function($resource, $scope) {
-    $scope.things = $resource('/things', {}, {}).get();
+    $scope.things = $resource('/things', {}, {}).query();
   }]);
- 
