@@ -7,7 +7,13 @@ var route = router();
 var toRespond = [];
 
 route.post('/things', function(req, res){
-	console.log(req.read());
+	// console.log(req);
+	req.on('data', function(chunk){
+		toRespond.push(chunk);
+		console.log('chunk' + chunk);
+	})
+	res.writeHead(200);
+	res.end();
 });
 
 route.get('/things', function(req, res) {
@@ -16,7 +22,8 @@ route.get('/things', function(req, res) {
 	res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, X-Requested-With');
     res.writeHead(200);
-    res.end('[{"name":"Apple"},{"name":"Bannana"},{"name":"Orange"}]');
+    res.end(toRespond.pop());
+    // res.end('[{"name":"Apple"},{"name":"Bannana"},{"name":"Orange"}]');
     console.log('.');
 });
 
