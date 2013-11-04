@@ -6,9 +6,9 @@ var route = router();
 
 var toRespond = [];
 
-route.post('/things', function(req, res){
+route.post('/things', function(req, res) {
 	// console.log(req);
-	req.on('data', function(chunk){
+	req.on('data', function(chunk) {
 		toRespond.push(chunk);
 		console.log('chunk' + chunk);
 	})
@@ -21,13 +21,13 @@ route.get('/things', function(req, res) {
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, X-Requested-With');
-    res.writeHead(200);
-    res.end(toRespond.pop());
-    // res.end('[{"name":"Apple"},{"name":"Bannana"},{"name":"Orange"}]');
-    console.log('.');
+	res.writeHead(200);
+	res.end(toRespond.pop());
+	// res.end('[{"name":"Apple"},{"name":"Bannana"},{"name":"Orange"}]');
+	console.log('.');
 });
 
-route.options('/things', function(req, res){
+route.options('/things', function(req, res) {
 	console.log('options');
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
