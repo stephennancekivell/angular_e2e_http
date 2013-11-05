@@ -1,0 +1,12 @@
+{
+	"name": "angular-e2e-http",
+	"version": "0.0.1",
+	"dependencies": {
+		"jquery": "1.9.1",
+		"angular": "1.0.8",
+		"angular-loader": "1.0.8",
+		"angular-resource": "1.0.8",
+		"angular-mocks": "1.0.8",
+		"angular-scenario": "1.0.8"
+	}
+}
