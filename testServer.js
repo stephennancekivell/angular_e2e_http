@@ -9,7 +9,6 @@ var toRespond = [];
 route.post('/things', function(req, res) {
 	req.on('data', function(chunk) {
 		toRespond.push(chunk);
-		console.log('chunk' + chunk);
 	});
 	res.writeHead(200);
 	res.end();
@@ -21,11 +20,9 @@ route.get('/things', function(req, res) {
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, X-Requested-With');
 	res.writeHead(200);
 	res.end(toRespond.pop());
-	console.log('.');
 });
 
 route.options('/things', function(req, res) {
-	console.log('options');
 	res.setHeader('Access-Control-Allow-Origin', '*');
 	res.setHeader('Access-Control-Allow-Methods', 'GET, OPTIONS');
 	res.setHeader('Access-Control-Allow-Headers', 'Content-Type, Accept, X-Requested-With');
