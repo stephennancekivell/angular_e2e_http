@@ -1,0 +1,17 @@
+{
+  "name": "angular-loader",
+  "version": "1.0.8",
+  "main": "./angular-loader.js",
+  "dependencies": {
+    "angular": "1.0.8"
+  },
+  "gitHead": "9cafc911b560b960c7a7c0a6ba94fd71e2a75559",
+  "readme": "bower-angular-loader\n====================\n\nbower repo for angular-loader.js",
+  "readmeFilename": "README.md",
+  "_id": "angular-loader@1.0.8",
+  "description": "bower-angular-loader ====================",
+  "repository": {
+    "type": "git",
+    "url": "git://github.com/angular/bower-angular-loader.git"
+  }
+}

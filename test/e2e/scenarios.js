@@ -14,6 +14,7 @@ describe('my app', function() {
       // this fails because the result from HTTP get /things hasnt been set.
       expect(repeater('ul li').count()).toBe(3);
       expect(element('ul li').text()).toEqual('AppleBannanaOrange');
+      pause();
     });
   });
 });
