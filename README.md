@@ -7,8 +7,8 @@ On the master branch is unit testing where in the unit test the response data is
 ## ngMockE2E
 The ngMockE2E branch demonstrates how to use ngMockE2E. The appTest.js file sets all the response data. This technique is fine for smaller projects but as projects get bigger the mocks.js file will grow and become hard to mantain.
 
-## nodeTestServer
-The expected response is defined in scenarios.js and sent to a simple test server, which the app is pointing to.
+## [nodeTestServer](https://github.com/stephennancekivell/angular_e2e_http/tree/nodeTestServer)
+The expected response is defined in [scenarios.js](https://github.com/stephennancekivell/angular_e2e_http/blob/nodeTestServer/test/e2e/scenarios.js) and sent to a [simple test server](https://github.com/stephennancekivell/angular_e2e_http/blob/nodeTestServer/testServer.js), which the app is pointing to.
 
 ## mocks_file
 Similar to ngMockE2E. I used this before I learnt of ngMockE2E.
